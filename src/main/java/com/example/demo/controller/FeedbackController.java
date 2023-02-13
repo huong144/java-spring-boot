@@ -38,7 +38,7 @@ public class FeedbackController {
       Pageable pageable = PageRequest.of(currentPage - 1, pageSize);
       Page<Feedback> feedbackPage = feedbackService.findAllPageable(pageable);
       List<Feedback> feedbacks = feedbackPage.getContent();
-      return new DataResponse(true, feedbacks, feedbackService.findAll().size());
+      return new DataResponse(200, feedbacks, feedbackService.findAll().size());
     } catch (Exception e) {
       return new MessageResponse("false");
     }
@@ -47,7 +47,7 @@ public class FeedbackController {
   @PostMapping
   public BaseResponse create(@RequestBody Feedback feedback) {
     try {
-      return new MessageResponse(true, feedbackService.create(feedback));
+      return new MessageResponse(200, feedbackService.create(feedback));
     } catch (Exception e) {
       System.out.println(e);
     }

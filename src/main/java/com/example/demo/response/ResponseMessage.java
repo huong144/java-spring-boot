@@ -12,7 +12,7 @@ public ResponseMessage(String message) {
 }
 
 public ResponseMessage(int statusCode, String message) {
-    super();
+    super(statusCode);
     this.message = message;
 }
 

@@ -17,7 +17,7 @@ public class DataResponse<T> extends BaseResponse{
         this.total = total;
     }
 
-    public DataResponse(boolean status, List<T> data, long total) {
+    public DataResponse(int status, List<T> data, long total) {
         super(status);
         this.data = data;
         this.total = total;

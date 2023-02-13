@@ -1,21 +1,22 @@
 package com.example.demo.response;
 
 public class BaseResponse {
-    private boolean status;
+    private int statusCode;
 
     public BaseResponse() {
         super();
     }
 
-    public BaseResponse(boolean status) {
-        this.status = status;
+    public BaseResponse(int statusCode) {
+        this.statusCode = statusCode;
     }
 
-    public boolean isStatus() {
-        return status;
+    public int getStatusCode() {
+        return statusCode;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
 }
+

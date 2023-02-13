@@ -11,7 +11,7 @@ public class ObjectResponse<T> extends BaseResponse {
         this.object = object;
     }
 
-    public ObjectResponse(boolean status, T object) {
+    public ObjectResponse(int status, T object) {
         super(status);
         this.object = object;
     }

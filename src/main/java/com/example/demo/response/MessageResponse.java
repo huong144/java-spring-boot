@@ -11,7 +11,7 @@ public class MessageResponse extends BaseResponse {
         this.message = message;
     }
 
-    public MessageResponse(boolean status, String responseEntity) {
+    public MessageResponse(int status, String responseEntity) {
         super(status);
         this.message = responseEntity;
     }

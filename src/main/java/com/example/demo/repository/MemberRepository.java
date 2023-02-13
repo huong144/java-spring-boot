@@ -9,5 +9,7 @@ import com.example.demo.models.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Integer> {
 
-  Member findByTelephone(String telephone);
+   Member findByTelephone(String telephone);
+
+   Member findByEmail(String email);
 }

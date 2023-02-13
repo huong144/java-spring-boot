@@ -19,24 +19,14 @@ public class AuthController {
   @Autowired
   private AuthService authService;
 
-  // @PostMapping("/create-member")
-  // public Member createMember(@RequestBody Member member) {
-  // try {
-  // return authService.createMember(member);
-  // } catch (Exception e) {
-  // System.out.println(e);
-  // }
-  // return null;
-  // }
-
   @PostMapping("/register")
   public BaseResponse register(@RequestBody Member member) {
     member.setPassword(ConvertSHA1.convertSHA1(member.getPassword()));
     String resMess = authService.addMember(member);
     if (resMess.equalsIgnoreCase("success")) {
-      return new ResponseMessage(HttpStatus.OK.value(), resMess);
+    return new ResponseMessage(HttpStatus.OK.value(), resMess);
     } else {
-      return new ResponseMessage(HttpStatus.ACCEPTED.value(), resMess);
+    return new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "false");
     }
   }
 }
