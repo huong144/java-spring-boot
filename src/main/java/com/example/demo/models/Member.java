@@ -46,8 +46,12 @@ public class Member {
 	public Member() {
 		super();
 	}
+  public Member(String email, String password) {
+    this.email = email;
+    this.password = password;
+}
 
-	public int getId() {
+  public int getId() {
 		return id;
 	}
 
