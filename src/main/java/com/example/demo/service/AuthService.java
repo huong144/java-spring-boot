@@ -12,8 +12,8 @@ import com.example.demo.repository.MemberRepository;
 
 @Service
 public class AuthService {
-  private static final String SUCCESS = null;
-  private static final String FALSE = null;
+  private static final String SUCCESS = "success";
+  private static final String FALSE = "false";
   @Autowired
   private MemberRepository memberRepository;
 
